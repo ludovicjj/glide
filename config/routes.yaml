@@ -3,4 +3,7 @@
 #    controller: App\Controller\DefaultController::index
 home:
     path: /
-    controller: App\Controller\HomeController:index
+    controller: App\Controller\HomeController::index
+glide:
+    path: /img/{path}
+    controller: App\Controller\ImageController::show
