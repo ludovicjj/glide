@@ -1,0 +1,8 @@
+{% macro image(path, width, height, attrs, params) %}
+    <img src="{{ asset_path(path, params|default({})|merge({'w': width, 'h': height})) }}"
+         width="{{ width }}"
+         height="{{ height }}"
+         loading="lazy"
+    {% for name,value in attrs|default({}) %}{{ name }}="{{ value|e }}" {% endfor %}
+    />
+{% endmacro %}

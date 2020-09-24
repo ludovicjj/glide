@@ -1,5 +1,16 @@
 {% extends 'base.html.twig' %}
+{% import 'macro/macro.html.twig' as macros %}
+
 {% block body %}
 <h1>{{ content }}</h1>
     <img src="{{ asset_path('behelit.jpg', {'w': 600, 'h': 800}) }}" alt="">
+
+    {{ macros.image(
+        'behelit.jpg',
+        300,
+        800,
+        {'class': 'img-fluid', 'alt': 'behelit'},
+        {'fit': 'crop'}
+    ) }}
+
 {% endblock %}
