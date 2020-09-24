@@ -4,6 +4,6 @@
 home:
     path: /
     controller: App\Controller\HomeController::index
-glide:
+asset:
     path: /img/{path}
     controller: App\Controller\ImageController::show
