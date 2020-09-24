@@ -6,6 +6,8 @@
 parameters:
     app.public_dir: '%kernel.project_dir%/public/images'
     app.image_cache_dir: '%kernel.project_dir%/var/cache'
+    glide.key: '%env(string:GLIDE_KEY)%'
+
 services:
     # default configuration for services in *this* file
     _defaults:
@@ -35,4 +37,8 @@ services:
             $source: '%app.public_dir%'
             $cache: '%app.image_cache_dir%'
         public: true
+
+    App\Helper\AssetPathGenerator:
+        arguments:
+            $secret: '%glide.key%'
 
