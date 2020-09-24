@@ -6,4 +6,4 @@ home:
     controller: App\Controller\HomeController::index
 asset:
     path: /img/{path}
-    controller: App\Controller\ImageController::show
+    controller: App\Controller\AssetController::show
