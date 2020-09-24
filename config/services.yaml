@@ -36,6 +36,7 @@ services:
         arguments:
             $source: '%app.public_dir%'
             $cache: '%app.image_cache_dir%'
+            $secret: '%glide.key%'
         public: true
 
     App\Helper\AssetPathGenerator:
