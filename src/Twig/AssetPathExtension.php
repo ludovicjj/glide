@@ -24,9 +24,9 @@ class AssetPathExtension extends AbstractExtension
         ];
     }
 
-    public function assetPath(string $path, $parameters = []): string
+    public function assetPath(int $width, int $height, string $path): string
     {
-        return $this->assetGenerator->generator($path, $parameters);
+        return $this->assetGenerator->generator($width, $height, $path);
     }
 
 }
