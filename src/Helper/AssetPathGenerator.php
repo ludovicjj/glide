@@ -3,38 +3,26 @@
 
 namespace App\Helper;
 
-
-use League\Glide\Signatures\SignatureFactory;
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use League\Glide\Urls\UrlBuilderFactory;
 
 class AssetPathGenerator
 {
-    /** @var UrlGeneratorInterface $urlGenerator */
-    private $urlGenerator;
-
     /** @var string $secret */
     private $secret;
 
     public function __construct(
-        UrlGeneratorInterface $urlGenerator,
         string $secret
     )
     {
-        $this->urlGenerator = $urlGenerator;
         $this->secret = $secret;
     }
 
-    public function generator(string $path, array $parameters = []): string
+    public function generator(int $width, int $height, string $path): string
     {
-        // generate signature
-        $signature = SignatureFactory::create($this->secret)->generateSignature($path, $parameters);
-        $parameters['s'] = $signature;
-        $parameters['path'] = $path;
+        $baseUrl = '/resize';
+        $url = "/{$width}/{$height}/{$path}";
+        $urlBuilder = UrlBuilderFactory::create($baseUrl, $this->secret);
 
-        return $this->urlGenerator->generate(
-            'asset',
-            $parameters,
-            UrlGeneratorInterface::ABSOLUTE_PATH
-        );
+        return $urlBuilder->getUrl($url);
     }
 }
