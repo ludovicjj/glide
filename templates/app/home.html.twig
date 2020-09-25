@@ -1,16 +1,177 @@
 {% extends 'base.html.twig' %}
-{% import 'macro/macro.html.twig' as macros %}
 
 {% block body %}
-<h1>{{ content }}</h1>
-    <img src="{{ asset_path('behelit.jpg', {'w': 600, 'h': 800}) }}" alt="">
-
-    {{ macros.image(
-        'behelit.jpg',
-        300,
-        800,
-        {'class': 'img-fluid', 'alt': 'behelit'},
-        {'fit': 'crop'}
-    ) }}
-
+<div class="container">
+    <h1>{{ content }}</h1>
+    <div class="grid">
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-img">
+                    <img src="{{ asset_path(300, 100, 'behelit.jpg') }}" alt="">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">John Smith</h5>
+                    <h6 class="card-subtitle pink">Card subtitle</h6>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                </div>
+                <div class="card-footer pink-bg">
+                    <div class="footer-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-title">Read</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="stat-number">4152</div>
+                        <div class="stat-title">Views</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="stat-number">32</div>
+                        <div class="stat-title">Comments</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-img">
+                    <img src="{{ asset_path(300, 100, 'behelit.jpg') }}" alt="">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">John Smith</h5>
+                    <h6 class="card-subtitle apple">Card subtitle</h6>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                </div>
+                <div class="card-footer apple-bg">
+                    <div class="footer-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-title">Read</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="stat-number">4152</div>
+                        <div class="stat-title">Views</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="stat-number">32</div>
+                        <div class="stat-title">Comments</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-img">
+                    <img src="{{ asset_path(300, 100, 'behelit.jpg') }}" alt="">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">John Smith</h5>
+                    <h6 class="card-subtitle orange">Card subtitle</h6>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                </div>
+                <div class="card-footer orange-bg">
+                    <div class="footer-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-title">Read</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="stat-number">4152</div>
+                        <div class="stat-title">Views</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="stat-number">32</div>
+                        <div class="stat-title">Comments</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-img">
+                    <img src="{{ asset_path(300, 100, 'behelit.jpg') }}" alt="">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">John Smith</h5>
+                    <h6 class="card-subtitle azure">Card subtitle</h6>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                </div>
+                <div class="card-footer azure-bg">
+                    <div class="footer-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-title">Read</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="stat-number">4152</div>
+                        <div class="stat-title">Views</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="stat-number">32</div>
+                        <div class="stat-title">Comments</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-img">
+                    <img src="{{ asset_path(300, 100, 'behelit.jpg') }}" alt="">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">John Smith</h5>
+                    <h6 class="card-subtitle orange">Card subtitle</h6>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                </div>
+                <div class="card-footer orange-bg">
+                    <div class="footer-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-title">Read</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="stat-number">4152</div>
+                        <div class="stat-title">Views</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="stat-number">32</div>
+                        <div class="stat-title">Comments</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-img">
+                    <img src="{{ asset_path(300, 100, 'behelit.jpg') }}" alt="">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">John Smith</h5>
+                    <h6 class="card-subtitle azure">Card subtitle</h6>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                </div>
+                <div class="card-footer azure-bg">
+                    <div class="footer-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-title">Read</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="stat-number">4152</div>
+                        <div class="stat-title">Views</div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="stat-number">32</div>
+                        <div class="stat-title">Comments</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
