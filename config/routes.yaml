@@ -5,5 +5,9 @@ home:
     path: /
     controller: App\Controller\HomeController::index
 asset:
-    path: /img/{path}
+    path: /resize/{width}/{height}/{path}
     controller: App\Controller\AssetController::show
+    requirements:
+        width: '\d+'
+        height: '\d+'
+        path: .+
