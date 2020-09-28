@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\Routing\Annotation\Route;
 
 class AssetController
 {
@@ -35,6 +36,24 @@ class AssetController
        $this->secret = $parameterBag->get('glide.key');
     }
 
+
+    /**
+     * @param Request $request
+     * @param int $width
+     * @param int $height
+     * @param string $path
+     * @return Response
+     *
+     * @Route(
+     *     "/resize/{width}/{height}/{path}",
+     *     name="asset",
+     *     requirements={
+     *         "width"="\d+",
+     *         "height"="\d+",
+     *         "path"=".+"
+     *     }
+     * )
+     */
     public function show(Request $request, int $width, int $height, string $path): Response
     {
         $server = ServerFactory::create([
