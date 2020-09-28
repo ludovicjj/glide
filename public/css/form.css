@@ -1,0 +1,10 @@
+body {
+    color: var(--clr-light);
+}
+
+.container {
+    display: grid;
+    color: var(--clr-light);
+    justify-items: center;
+    margin-top: 300px;
+}
