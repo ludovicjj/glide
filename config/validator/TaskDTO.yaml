@@ -1,0 +1,5 @@
+App\Form\DTO\TaskDTO:
+  properties:
+    title:
+      - NotBlank:
+          message: Veuillez saisir un titre.
