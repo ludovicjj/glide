@@ -57,7 +57,17 @@
                 </div>
             </div>
 
-            <div class="background"></div>
+            <div class="background">
+                <svg width="0" height="0" x="0px" y="0px" xml:space="preserve">
+                    <defs>
+                        <clipPath id="wave" clipPathUnits="objectBoundingBox">
+                            <path fill="#E30613" d="M1,0L1,0H0v0.4h0c0.2,0,0.2,0.1,0.5,0.1c0.2,0,0.2-0.1,0.5-0.1h0l0,0h0c0.2,0,0.2,0.1,0.5,0.1c0.2,0,0.2-0.1,0.5-0.1c0,0,0,0,0,0V0H1z"/>
+                            <animateTransform attributeName="transform" type="translate" from="0 0" to="-200 0" begin="0s" dur="6s" repeatCount="indefinite"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <img class="background-cover" src="{{ asset('images/behelit.jpg') }}" alt="">
+            </div>
         </div>
     </div>
 {% endblock %}

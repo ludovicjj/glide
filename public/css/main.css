@@ -23,7 +23,6 @@ html, body {
 body {
     font-family: sans-serif;
     background-color: var(--clr-dark);
-    height: 300vh;
 }
 h1, h2, h3, p {
     margin: 0
